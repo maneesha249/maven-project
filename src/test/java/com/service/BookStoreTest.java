@@ -1,10 +1,9 @@
 package com.service;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.model.Book;
 
@@ -14,7 +13,7 @@ public class BookStoreTest {
     private Book book1;
     private Book book2;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         bookStore = new BookStore();
         book1 = new Book("B001", "Java Programming", "John Doe", "Technology", 29.99);
@@ -44,6 +43,7 @@ public class BookStoreTest {
 
     @Test
     public void testDisplayAll() {
-        String expectedOutput = "[" + "BookId-B001 Book name-Java Programming Author-John Doe Category-Technology Price-29.99, " + "BookId-B002 Book name-Advanced Java Author-Jane Doe Category-Technology Price-39.99" +"]";
+        String expectedOutput = "[" + "BookId-B001 Book name-Java Programming Author-John Doe Category-Technology Price-29.99, " + "BookId-B002 Book name-Advanced Java Author-Jane Doe Category-Technology Price-39.99" + "]";
+        assertEquals(expectedOutput, bookStore.displayAll());
     }
 }
