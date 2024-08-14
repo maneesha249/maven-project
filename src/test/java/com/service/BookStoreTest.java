@@ -43,7 +43,8 @@ public class BookStoreTest {
 
     @Test
     public void testDisplayAll() {
-        String expectedOutput = "[" + "BookId-B001 Book name-Java Programming Author-John Doe Category-Technology Price-29.99, " + "BookId-B002 Book name-Advanced Java Author-Jane Doe Category-Technology Price-39.99" + "]";
+        String expectedOutput = "[" + "BookId-B001 Book name-Java Programming Author-John Doe Category-Technology Price-29.99, " 
+                            + "BookId-B002 Book name-Advanced Java Author-Jane Doe Category-Technology Price-39.99" + "]";
         assertEquals(expectedOutput, bookStore.displayAll());
     }
 }
