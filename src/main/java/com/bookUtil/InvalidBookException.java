@@ -1,4 +1,4 @@
-package com.bookUtil;
+package com.service;
 
 public class InvalidBookException extends Exception {
 	public InvalidBookException(String msg) {
